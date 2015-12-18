@@ -6,7 +6,7 @@ import java.util.Date;
 /*
  * comment
  */
-public abstract class Person {
+public abstract class Person implements iPersonRead, iPersonReadWrite{
 
 	private Date DOB;
 	private String FirstName;
