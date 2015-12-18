@@ -19,6 +19,7 @@ public abstract class Person {
 	public String getFirstName() {
 		return FirstName;
 	}
+	
 
 	public void setFirstName(String FirstName) {
 		this.FirstName = FirstName;
