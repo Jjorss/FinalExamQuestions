@@ -29,17 +29,31 @@ public class Rectangle_Test {
 	@Test
 	public void Rectangle_Test1() {
 		
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+		try{
+			Rectangle r2 = new Rectangle(-5, -10);
+			assertTrue(r2.ComputeArea() == 50);
+		}catch(IllegalRectangle e) {
+			System.err.println("x or y cannot be <= 0");
+			System.err.println("X=" + e.getX());
+			System.err.println("Y=" + e.getY());
+		}
 	}
 	
 	@Test
 	public void Rectangle_Test2() {
 		
 	
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+		Rectangle r2 = null;
+		try {
+			r2 = new Rectangle(5, 10);
+			assertTrue(r2.ComputeArea() == 50);
+		} catch (IllegalRectangle e) {
+			System.err.println("x or y cannot be <= 0");
+			System.err.println("X=" + e.getX());
+			System.err.println("Y=" + e.getY());
+		}
+		
 	}
-	
+
 
 }
